@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="platoom-cloud-common" />
+        <module name="platoom-cloud-gateway-web" />
+        <module name="platoom-cloud-register" />
+        <module name="platoom-cloud-search-api" />
+        <module name="platoom-cloud-search-biz" />
+        <module name="platoom-cloud-search-provider" />
+        <module name="platoom-cloud-user-api" />
+        <module name="platoom-cloud-user-biz" />
+        <module name="platoom-cloud-user-provider" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="platoom-cloud-gateway-search-api" target="1.8" />
+      <module name="platoom-cloud-gateway-search-biz" target="1.8" />
+      <module name="platoom-cloud-gateway-search-provider" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="platoom-cloud-common" options="-parameters" />
+      <module name="platoom-cloud-gateway-search-api" options="-parameters" />
+      <module name="platoom-cloud-gateway-search-biz" options="-parameters" />
+      <module name="platoom-cloud-gateway-search-provider" options="-parameters" />
+      <module name="platoom-cloud-gateway-web" options="-parameters" />
+      <module name="platoom-cloud-register" options="-parameters" />
+      <module name="platoom-cloud-search-api" options="-parameters" />
+      <module name="platoom-cloud-search-biz" options="-parameters" />
+      <module name="platoom-cloud-search-provider" options="-parameters" />
+      <module name="platoom-cloud-user-api" options="-parameters" />
+      <module name="platoom-cloud-user-biz" options="-parameters" />
+      <module name="platoom-cloud-user-provider" options="-parameters" />
+    </option>
+  </component>
+</project>

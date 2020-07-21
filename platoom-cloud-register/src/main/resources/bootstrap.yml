@@ -1,0 +1,14 @@
+server:
+  port: 8070
+
+eureka:
+  instance:
+    hostname: platoom-cloud-eureka
+  client:
+    ## 是否将自己注册到  Eureka 服务中
+    registerWithEureka: false
+    ## 是否获取注册信息
+    fetchRegistry: false
+    serviceUrl:
+      ## 设置 交互 地址
+      defaultZone: http://localhost:${server.port}/eureka/

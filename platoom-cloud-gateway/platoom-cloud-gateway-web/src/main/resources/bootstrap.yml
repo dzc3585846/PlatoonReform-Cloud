@@ -1,0 +1,19 @@
+server:
+  port: 8071
+spring:
+  application:
+    name: microservicecloud-zuul-gateway
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://127.0.0.1:8070/eureka/
+  instance:
+    instance-id: microservicecloud-zuul-gateway #自定义相关服务名称信息
+    prefer-ip-address: true   #访问路径可以显示ip地址（鼠标放在服务名称那）
+
+zuul:
+  prefix: /plattomcloud #设置路由前缀
+  ignored-services: "*"  #忽视服务名，解决微服务名称还能访问的问题
+  routes:   #配置路由
+    mydept.serviceId: plattomcloud-user
+    mydept.path: /user/**

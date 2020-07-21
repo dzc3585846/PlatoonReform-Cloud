@@ -1,0 +1,12 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: platoom-cloud-search-provider
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://127.0.0.1:8070/eureka/
+  instance:
+    instance-id: platoom-cloud-search-provider #自定义相关服务名称信息
+    prefer-ip-address: true   #访问路径可以显示ip地址（鼠标放在服务名称那）
