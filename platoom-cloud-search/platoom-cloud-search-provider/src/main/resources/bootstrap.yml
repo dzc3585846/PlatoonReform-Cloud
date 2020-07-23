@@ -3,6 +3,15 @@ server:
 spring:
   application:
     name: platoom-cloud-search-provider
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/platoomcloudsearch
+    username: root
+    password: root
+  jpa:
+    show-sql: true  #显示sql
+    hibernate:
+      ddl-auto: none
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
@@ -10,3 +19,7 @@ eureka:
   instance:
     instance-id: platoom-cloud-search-provider #自定义相关服务名称信息
     prefer-ip-address: true   #访问路径可以显示ip地址（鼠标放在服务名称那）
+search:
+  mq:
+    queue: search_cloud_queue
+    routingkey: search_cloud_routingkey
